@@ -1,0 +1,6 @@
+framework module Pods_rxswiftsandbox {
+  umbrella header "Pods-rxswiftsandbox-umbrella.h"
+
+  export *
+  module * { export * }
+}
