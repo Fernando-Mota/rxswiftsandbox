@@ -109,6 +109,29 @@ example(of: "ReplaySubject") {
     
 }
 
+example(of: "variable") {
+    
+    var variable = Variable("Initial value")
+    
+    let disposeBag = DisposeBag()
+    
+    variable.value = "New initial value"
+    
+    variable.asObservable()
+        .subscribe{ event in
+            print(label: "1)", event: event)
+        }.disposed(by: disposeBag)
+    
+    variable.value = "1"
+    
+    variable.asObservable()
+        .subscribe{ event in
+            print(label: "2)", event: event)
+        }.disposed(by: disposeBag)
+    
+    variable.value = "2"
+}
+
 
 
 
