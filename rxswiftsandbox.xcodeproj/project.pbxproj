@@ -25,6 +25,8 @@
 		6C1FEC721F9FB3D900B9C65B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C1FEC751F9FB3D900B9C65B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C1FEC771F9FB3D900B9C65B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C24744D1FF56CC8007EA386 /* BlackjackPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BlackjackPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		6C24744E1FF56CDC007EA386 /* UserSessionStatePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UserSessionStatePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6C276E191FF2F45D00447840 /* ChallengeTwoPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ChallengeTwoPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6C276E1A1FF2F46F00447840 /* ChallengeOnePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ChallengeOnePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6C276E1C1FF3D4BD00447840 /* SubjectsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SubjectsPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -80,6 +82,22 @@
 			path = rxswiftsandbox;
 			sourceTree = "<group>";
 		};
+		6C24744A1FF56C8D007EA386 /* UserSessionState */ = {
+			isa = PBXGroup;
+			children = (
+				6C24744E1FF56CDC007EA386 /* UserSessionStatePlayground.playground */,
+			);
+			path = UserSessionState;
+			sourceTree = "<group>";
+		};
+		6C24744B1FF56C93007EA386 /* Blackjack */ = {
+			isa = PBXGroup;
+			children = (
+				6C24744D1FF56CC8007EA386 /* BlackjackPlayground.playground */,
+			);
+			path = Blackjack;
+			sourceTree = "<group>";
+		};
 		6C276E171FF2F40B00447840 /* ChallengeOne */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +117,8 @@
 		6C276E1B1FF3D43A00447840 /* Subjects */ = {
 			isa = PBXGroup;
 			children = (
+				6C24744B1FF56C93007EA386 /* Blackjack */,
+				6C24744A1FF56C8D007EA386 /* UserSessionState */,
 				6C276E1C1FF3D4BD00447840 /* SubjectsPlayground.playground */,
 			);
 			path = Subjects;
