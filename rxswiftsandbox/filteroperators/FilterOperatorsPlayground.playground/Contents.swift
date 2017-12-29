@@ -97,7 +97,48 @@ example(of: "skipUntil") {
     subject.onNext("Event 4")
 }
 
+example(of: "take") {
+    let disposeBag = DisposeBag()
+    
+    Observable.of(1, 2, 3, 4, 5, 6)
+        .take(3)
+        .subscribe(onNext: { value in
+            print(value)
+        }).disposed(by: disposeBag)
+}
 
+example(of: "takeWhile") {
+    let disposeBag = DisposeBag()
+    
+    Observable.of(2, 2, 4, 4, 5, 6, 6)
+        .enumerated()
+        .takeWhile{ index, value in
+            value % 2 == 0 && index < 3
+        }.map { $0.element }
+        .subscribe(onNext: { value in
+            print(value)
+        }).disposed(by: disposeBag)
+}
+
+example(of: "takeUntil") {
+    let disposeBag = DisposeBag()
+    
+    let subject = PublishSubject<String>()
+    let trigger = PublishSubject<String>()
+    
+    subject
+        .takeUntil(trigger)
+        .subscribe(onNext: { value in
+            print(value)
+        }).disposed(by: disposeBag)
+    
+    subject.onNext("elemento 1")
+    subject.onNext("elemento 2")
+    subject.onNext("elemento 3")
+    trigger.onNext("X")
+    subject.onNext("elemento 4")
+    subject.onNext("elemento 5")
+}
 
 
 
